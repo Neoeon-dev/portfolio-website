@@ -1,0 +1,118 @@
+body{
+    background-color: #F5EBE6;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 425;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    margin: 0;
+    padding: 0;
+}
+
+#Home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 80vh;
+    gap: 40px;
+}
+
+#description{
+    flex: 1;                     /* Takes up proportional space */
+    text-align: center;
+}
+
+#profile{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#About-me{
+    align-items: left;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 80vh;
+    gap: 40px;
+    text-align: left;
+}
+
+#About-me a{
+    display: block;          /* Allows the link to behave like a box container */
+    background-color: #444444;
+    color: #F5EBE6;          /* Dark text color */
+    padding: 20px;
+    border-radius: 100px;
+    border: 2px solid  #F5EBE6;
+    text-decoration: none;   /* Removes the default underline from links */
+    width: 100px;
+    transition: all 0.3s ease; /* Makes the hover effect smooth */
+    cursor: pointer;
+    text-align: center;
+}
+
+#About-me a:hover{
+    transform: translateY(-10px);
+    background-color: #ffffff;
+    color: #444444;
+}
+
+#Skills{
+    padding: 50px;
+    min-height: 80vh;
+    text-align: center;
+}
+
+#Skills #skills-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;          /* Keeps elements side-by-side */
+    overflow-x: auto;          /* Enables horizontal scrolling functionality */
+    gap: 40px;                 /* Sets horizontal distance between cards */
+    padding: 40px 20px;        /* Breathing room for elements/tags */
+    scroll-behavior: smooth;
+    
+    /* Hide scrollbars for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbars for IE, Edge and Firefox */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+}
+
+.skill-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   /* Aligns text left beneath the circle */
+    position: relative;        /* Crucial context for the absolute tag placement */
+    flex-shrink: 0;            /* Prevents browser from squeezing the cards */
+    width: 220px;              /* Sets a standard width for the card layout uniform */
+}
+
+skills-list::-webkit-scrollbar {
+    height: 6px; /* Controls the thickness of the horizontal scrollbar */
+}
+
+/* Style the track (background) of the scrollbar */
+.skills-list::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Style the draggable thumb handle */
+.skills-list::-webkit-scrollbar-thumb {
+    background: #444444; 
+    border-radius: 10px;
+}
+
+/* Change color when user hovers over the scrollbar thumb */
+.skills-list::-webkit-scrollbar-thumb:hover {
+    background: #555555; 
+}
+
+
+
+
