@@ -5,6 +5,19 @@
     gap: 10vw;
     align-content: center;
     overflow-x: hidden;
+    position:relative;
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 30% 50%,
+            rgba(124,58,237,.08),
+            transparent 35%),
+
+        radial-gradient(circle at 80% 20%,
+            rgba(34,211,238,.08),
+            transparent 30%),
+
+        linear-gradient(#ffffff,#f8fafc);
 }
 
 .Projects-left{

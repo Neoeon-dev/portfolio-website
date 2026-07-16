@@ -11,9 +11,10 @@ interface Props{
     body: string[];
     githubLink: string[];
     liveLink: string[];
+    tech: string[][];
 }
 
-function Projects({CardsSrc, CardsShortData, altText, heading, body, githubLink, liveLink} : Props){
+function Projects({CardsSrc, CardsShortData, altText, heading, body, githubLink, liveLink, tech} : Props){
     const containerRef = useRef<HTMLDivElement>(null);
     const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -93,7 +94,7 @@ function Projects({CardsSrc, CardsShortData, altText, heading, body, githubLink,
     return (
         <section className="Projects" id="projects">
             <div className="Projects-left">
-                <BigCard imgSrc={CardsSrc[realIndex]} altText={altText[realIndex]} heading={heading[realIndex]} body={body[realIndex]} githubLink={githubLink[realIndex]} liveLink={liveLink[realIndex]}/>
+                <BigCard imgSrc={CardsSrc[realIndex]} altText={altText[realIndex]} heading={heading[realIndex]} body={body[realIndex]} githubLink={githubLink[realIndex]} liveLink={liveLink[realIndex]} tech={tech[realIndex]}/>
             </div>
             <div className="Projects-right">
                 <div className="Cards" ref={containerRef}>

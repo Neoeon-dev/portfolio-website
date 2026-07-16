@@ -52,10 +52,12 @@ function App(){
 
     let liveLink = ["https://myportfolio.com", "https://reactjs.org", "https://vitejs.dev", "https://myportfolio.com", "https://reactjs.org", "https://vitejs.dev", "https://myportfolio.com", "https://reactjs.org", "https://vitejs.dev"];
 
+    let tech = [["C++"], ["C++"], ["C++", "Python"], ["C++", "react"], ["C++"], ["C++"], ["C++"], ["C++"], ["C++"]];
+
     return (
         <div className="scroll-container">
             <Home></Home>
-            <Projects CardsSrc={CardsSrc} CardsShortData={CardsShortData} altText={altText} heading={heading} body={body} githubLink={githubLink} liveLink={liveLink}></Projects>
+            <Projects CardsSrc={CardsSrc} CardsShortData={CardsShortData} altText={altText} heading={heading} body={body} githubLink={githubLink} liveLink={liveLink} tech={tech}></Projects>
             <Skills></Skills>
             <AboutMe></AboutMe>
             <Contact></Contact>
