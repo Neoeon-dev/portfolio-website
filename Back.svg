@@ -1,0 +1,103 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700"
+     xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+
+        <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#3d8fff"/>
+            <stop offset="50%" stop-color="#66e6ff"/>
+            <stop offset="100%" stop-color="#3d8fff"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Outer Frame -->
+
+    <path
+        d="
+        M40 80
+        L70 50
+        L1130 50
+        L1160 80
+        L1160 620
+        L1130 650
+        L70 650
+        L40 620
+        Z"
+
+        fill="none"
+        stroke="url(#borderGradient)"
+        stroke-width="2"
+        filter="url(#glow)"
+    />
+
+    <!-- Inner Frame -->
+
+    <path
+        d="
+        M60 95
+        L85 70
+        L1115 70
+        L1140 95
+        L1140 605
+        L1115 630
+        L85 630
+        L60 605
+        Z"
+
+        fill="none"
+        stroke="#2d7fff"
+        stroke-opacity="0.25"
+        stroke-width="1"
+    />
+
+    <!-- Top Accent -->
+
+    <line
+        x1="480"
+        y1="50"
+        x2="720"
+        y2="50"
+        stroke="#7ffcff"
+        stroke-width="2"
+        filter="url(#glow)"
+    />
+
+    <!-- Bottom Accent -->
+
+    <line
+        x1="480"
+        y1="650"
+        x2="720"
+        y2="650"
+        stroke="#7ffcff"
+        stroke-width="2"
+        filter="url(#glow)"
+    />
+
+    <!-- Center Diamonds -->
+
+    <polygon
+        points="600,45 606,50 600,55 594,50"
+        fill="#8ffcff"
+        filter="url(#glow)"
+    />
+
+    <polygon
+        points="600,645 606,650 600,655 594,650"
+        fill="#8ffcff"
+        filter="url(#glow)"
+    />
+
+    <!-- Side Lights -->
+
+    <circle cx="40" cy="350" r="4" fill="#6ffcff" filter="url(#glow)"/>
+    <circle cx="1160" cy="350" r="4" fill="#6ffcff" filter="url(#glow)"/>
+
+</svg>
