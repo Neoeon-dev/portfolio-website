@@ -91,7 +91,7 @@ function Projects({CardsSrc, CardsShortData, altText, heading, body, githubLink,
     const realIndex = activeIndex % cards.length;
 
     return (
-        <section className="Projects">
+        <section className="Projects" id="projects">
             <div className="Projects-left">
                 <BigCard imgSrc={CardsSrc[realIndex]} altText={altText[realIndex]} heading={heading[realIndex]} body={body[realIndex]} githubLink={githubLink[realIndex]} liveLink={liveLink[realIndex]}/>
             </div>

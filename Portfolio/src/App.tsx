@@ -1,8 +1,43 @@
 import Home from "./components/Home";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import AboutMe from "./components/AboutMe";
+import Contact from "./components/Contact";
 import "./App.css"
+import {useRef, useEffect} from "react"
 
 function App(){
+    const ref = useRef<HTMLHeadingElement>(null);
+
+    useEffect(() => {
+        const element = ref.current;
+        if (!element) return;
+
+        let visible = false;
+
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting && !visible) {
+                visible = true;
+                element.classList.add("glitch");
+            }
+
+            if (!entry.isIntersecting) {
+                visible = false;
+            }
+        }, {
+            threshold: 0.5
+        });
+
+        observer.observe(element);
+
+        const end = () => element.classList.remove("glitch");
+        element.addEventListener("animationend", end);
+
+        return () => {
+            observer.disconnect();
+            element.removeEventListener("animationend", end);
+        };
+    }, []);
     let CardsSrc = ["/src/assets/hero.png", "/src/assets/react.svg", "/src/assets/vite.svg", "/src/assets/hero.png", "/src/assets/react.svg", "/src/assets/vite.svg", "/src/assets/hero.png", "/src/assets/react.svg", "/src/assets/vite.svg"];
 
     let CardsShortData = ["yay", "I am inevitable", "I never give up", "yay", "I am inevitable", "I never give up", "yay", "I am inevitable", "I never give up"];
@@ -21,6 +56,9 @@ function App(){
         <div className="scroll-container">
             <Home></Home>
             <Projects CardsSrc={CardsSrc} CardsShortData={CardsShortData} altText={altText} heading={heading} body={body} githubLink={githubLink} liveLink={liveLink}></Projects>
+            <Skills></Skills>
+            <AboutMe></AboutMe>
+            <Contact></Contact>
         </div>
     )
 }

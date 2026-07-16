@@ -1,0 +1,86 @@
+.ContactContainer{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background:
+        radial-gradient(circle at top,
+        #111827 0%,
+        #09090f 60%,
+        #040406 100%);
+}
+
+.Content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+
+    box-sizing: border-box;
+    padding: clamp(0px, 10vw, 1000px) clamp(20px, 8vw, 80px);
+
+    transition: .3s;
+}
+
+.Content p{
+    line-height: 1.7;
+    text-align: left;
+    font-size: clamp(0.35rem, 0.3vw + 0.5rem, 1.25rem);
+    line-height: 1.7;
+    text-align: left;
+}
+
+.Content h1{
+    font-size: clamp(1.5rem, 0.6vw + 0.5rem, 3rem);
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00c8ff;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.Roles{
+    width: 80vw;
+}
+
+.Contact{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    background-color: white;
+
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logo img{
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.logo:hover{
+    transform: translateY(-6px) scale(1.1);
+    box-shadow: 0 0 20px bisque;
+}

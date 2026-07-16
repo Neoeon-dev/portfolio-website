@@ -1,9 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
 
 body{
-    font-family: 'Poppins', Arial, sans-serif;
-    font-family: "DynaPuff", system-ui;
+    font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 425;
+    font-weight: 600;
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
@@ -11,3 +13,37 @@ body{
     padding: 0;
 }
 
+.glicth{
+    animation: glitch 600ms;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translateX(0);
+        text-shadow: none;
+    }
+
+    10% {
+        transform: translateX(-3px);
+        text-shadow:
+            -3px 0 #00ffff,
+             3px 0 #ff00ff;
+    }
+
+    20% {
+        transform: translateX(3px);
+    }
+
+    30% {
+        transform: translateX(-2px);
+    }
+
+    40% {
+        transform: translateX(2px);
+    }
+
+    100% {
+        transform: translateX(0);
+        text-shadow: none;
+    }
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#02040f"/>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <circle cx="250" cy="180" r="3" fill="#fff"/>
+  <circle cx="420" cy="130" r="2" fill="#fff"/>
+  <circle cx="690" cy="220" r="4" fill="#fff"/>
+  <circle cx="980" cy="110" r="2" fill="#fff"/>
+  <circle cx="1220" cy="180" r="3" fill="#fff"/>
+  <circle cx="1400" cy="260" r="2" fill="#fff"/>
+  <circle cx="300" cy="520" r="2.5" fill="#fff"/>
+  <circle cx="540" cy="680" r="2.5" fill="#fff"/>
+  <circle cx="860" cy="610" r="3" fill="#fff"/>
+  <circle cx="1100" cy="760" r="2" fill="#fff"/>
+  <circle cx="1330" cy="640" r="3" fill="#fff"/>
+  <circle cx="1500" cy="780" r="2" fill="#fff"/>
+  <circle cx="700" cy="480" r="2" fill="#fff"/>
+  <ellipse cx="1100" cy="310" rx="280" ry="160" fill="#4b1d7a" opacity="0.35"/>
+  <ellipse cx="430" cy="650" rx="220" ry="140" fill="#0b5f7d" opacity="0.25"/>
+  <ellipse cx="1200" cy="700" rx="240" ry="150" fill="#7b2cbf" opacity="0.2"/>
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#09061f"/>
+      <stop offset="100%" stop-color="#02040f"/>
+    </radialGradient>
+  </defs>
+</svg>

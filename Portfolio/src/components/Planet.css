@@ -1,0 +1,36 @@
+.Planet{
+    width: var(--size);
+    height: var(--size);
+
+    background-color: var(--color);
+
+    border-radius: 50%;
+
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    pointer-events: auto;
+}
+
+.PlanetLogo {
+    width: 70%;
+    height: 70%;
+
+    object-fit: contain;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+.Planet:hover{
+    box-shadow:
+        0 0 15px var(--glow),
+        0 0 30px var(--glow);
+}
