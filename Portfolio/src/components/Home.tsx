@@ -21,7 +21,7 @@ function Home(){
             </div>
             <div className="top">
                 <div className="top-left">
-                    <img src="/src/assets/react.svg"/>
+                    <img src="/react.svg"/>
                 </div>
                 <div className="nav" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                     <div className={`menu ${isHovered || isClicked ? "open" : ""}`}>
@@ -45,7 +45,7 @@ function Home(){
                     </p>
                 </div>
                 <div className="photo">
-                    <img src = "/src/assets/hero.png"/>
+                    <img src = "/hero.png"/>
                 </div>
                 <div className="right">
                     <p ref={rightParagraphRef}>
