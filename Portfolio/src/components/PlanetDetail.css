@@ -1,0 +1,95 @@
+.DetailBackdrop{
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 5, 15, 0);
+    backdrop-filter: blur(0px);
+    transition: background 0.5s ease, backdrop-filter 0.5s ease;
+    z-index: 50;
+    cursor: pointer;
+}
+
+.DetailBackdrop--visible{
+    background: rgba(5, 5, 15, 0.85);
+    backdrop-filter: blur(4px);
+}
+
+.DetailPlanet{
+    position: fixed;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition:
+        left 0.55s cubic-bezier(.22,.68,0,1.15),
+        top 0.55s cubic-bezier(.22,.68,0,1.15),
+        width 0.55s cubic-bezier(.22,.68,0,1.15),
+        height 0.55s cubic-bezier(.22,.68,0,1.15);
+    z-index: 51;
+    cursor: default;
+}
+
+.DetailPlanetLogo{
+    width: 55%;
+    height: 55%;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.MoonField{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    z-index: 52;
+    cursor: default;
+    animation: detailFadeIn 0.4s ease 0.2s both;
+}
+
+@keyframes detailFadeIn{
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.DetailInfo{
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #eee;
+    width: 280px;
+    font-family: inherit;
+}
+
+.DetailInfo h2{
+    margin: 0 0 8px;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.DetailInfo p{
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.75;
+    line-height: 1.45;
+}
+
+.CloseButton{
+    margin-top: 18px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #eee;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s ease;
+}
+
+.CloseButton:hover{
+    background: rgba(255,255,255,0.18);
+}

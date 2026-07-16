@@ -3,3 +3,15 @@
     height: 100vh;
     width: 100%;
 }
+
+.SolarSystem{
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.45s ease, filter 0.45s ease;
+}
+
+.SolarSystem--dimmed{
+    opacity: 0.15;
+    filter: blur(2px);
+    pointer-events: none;
+}

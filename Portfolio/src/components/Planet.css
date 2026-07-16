@@ -12,6 +12,8 @@
     transform: translate(-50%, -50%);
 
     pointer-events: auto;
+
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .PlanetLogo {
@@ -27,6 +29,14 @@
     transform: translate(-50%, -50%);
 
     pointer-events: none;
+}
+
+.Planet--clickable{
+    cursor: pointer;
+}
+
+.Planet--clickable:hover{
+    transform: translate(-50%, -50%) scale(1.15);
 }
 
 .Planet:hover{

@@ -26,7 +26,7 @@ function Home(){
                 <div className="nav" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                     <div className={`menu ${isHovered || isClicked ? "open" : ""}`}>
                         <a className="menuElem" href="#projects">Projects</a>
-                        <a className="menuElem" href="#skills-container">Skills</a>
+                        <a className="menuElem" href="#skills">Skills</a>
                         <a className="menuElem" href="#aboutMe">AboutMe</a>
                         <a className="menuElem" href="#contact">Contact</a>
                     </div>

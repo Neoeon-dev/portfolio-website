@@ -14,4 +14,19 @@
     top:50%;
 
     transform:translate(-50%,-50%);
+
+    animation: sunPulse 4s ease-in-out infinite;
+}
+
+@keyframes sunPulse {
+    0%, 100% {
+        box-shadow:
+            0 0 30px gold,
+            0 0 60px orange;
+    }
+    50% {
+        box-shadow:
+            0 0 42px gold,
+            0 0 85px orange;
+    }
 }

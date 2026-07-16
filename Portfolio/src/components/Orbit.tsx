@@ -1,32 +1,37 @@
 import type React from "react";
 import "./Orbit.css"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 interface Props{
     radius: number;
     children: React.ReactNode;
-    setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+    setLoading?: React.Dispatch<React.SetStateAction<boolean>>;
     angle?: number;
     speed?: number;
+    paused?: boolean;
 }
 
-function Orbit({radius, children, setLoading, angle = 0, speed = 30} : Props){
+function Orbit({radius, children, setLoading, angle = 0, speed = 30, paused = false} : Props){
 
     let [currAngle, setCurrAngle] = useState(angle);
+
+    // read inside the rAF loop without re-subscribing the effect every toggle
+    const pausedRef = useRef(paused);
+    pausedRef.current = paused;
 
     useEffect(() => {
         let frameId: number;
 
         function rotate() {
-
-            setCurrAngle((Date.now() / 1000 * speed + angle) % 360);
-
+            if (!pausedRef.current) {
+                setCurrAngle((Date.now() / 1000 * speed + angle) % 360);
+            }
             frameId = requestAnimationFrame(rotate);
         }
 
         frameId = requestAnimationFrame(rotate);
 
-        setLoading(false);
+        setLoading?.(false);
 
         return () => cancelAnimationFrame(frameId);
     }, []);
